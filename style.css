@@ -1,0 +1,375 @@
+:root{
+    --colorprimary:rgb(34, 1, 34);
+    --colorsecondary:rgb(51, 2, 51);
+    --colorjunior:rgb(245, 110, 245);
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit ;
+}
+html{
+    font-size: 10px;
+    line-height: 1.2;
+    
+    
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 20rem;
+    box-sizing: border-box;
+    
+}
+.layout{
+    display: flex;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    color: var(--colorjunior);
+}
+.aside{
+    max-width: 300px;
+    width: 300px;
+    transition:width .7s ease;
+    background-color: var(--colorsecondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.layout .aside ul{
+   list-style-type: none;
+}
+.layout .aside ul li{
+    text-transform: uppercase;
+    padding: 2rem ;
+}
+.layout .aside ul li a{
+    text-decoration: none;
+    color: var(--colorjunior);
+    
+}
+.main{
+    
+    flex: 1;
+    background-color: var(--colorprimary);
+    overflow: hidden;
+    min-height: 100vh;
+    
+
+}
+section.content{
+    overflow: hidden;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+    position: relative;
+    /* height: calc(100vh - 7rem); */
+    scroll-behavior: smooth;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 9rem;
+    padding: 0 3rem;
+    align-items: center;
+    background-color: var(--colorsecondary);
+}
+.header img{
+    width: 170px;
+
+}
+#menuInput{
+    display: none;
+}
+#menuInput:checked+.layout .aside{
+    width: 0px;
+   
+
+
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.banner_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner .imgBx{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+.banner .imgBx img{
+    position:absolute ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+.banner h1{
+    position: relative;
+    font-size: 1.4rem;
+    color:var(--colorjunior) ;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+.banner a.btn{
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px;
+    background-color: var(--colorsecondary);
+    color:var(--colorjunior);
+    font-weight: 300;
+    margin-top: 1rem;
+    text-decoration: none;
+
+}
+.links{
+    display: flex;
+    margin: 1rem;
+}
+/* UL.social_media {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    list-style-type: none;
+}
+UL.social_media li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--colorsecondary);
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+
+
+}
+UL.social_media li a svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--colorjunior);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+section.about{
+    margin-top: 20rem;
+    padding: 20px 40px;
+}
+section .title{
+    width: 100%;
+    text-align: center;
+    
+
+
+}
+.title h2{
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+.title h2::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1rem;
+    width: 5rem;
+    height: .1rem;
+    background-color: var(--colorjunior);
+
+}
+section.about{
+    height: 70vh;
+}
+section.about .content{
+    display: flex;
+    justify-content: space-between;
+    
+}
+section.about .content .textbox{
+    /* width: 49%;
+    min-width: 40%; */
+    /* margin-left: 3rem; */
+    text-align: justify;
+    margin: 2rem;
+}
+section.about .content .textbox .imgBx{
+    margin-left: 4rem;
+
+
+}
+section.about .content .imgBx img{
+    max-width: 100%;
+    width: 70%;
+    margin-left: 16rem;
+
+}
+
+
+
+.services .title{
+    margin-top: 1rem;
+    padding: 1rem;
+
+}
+section.services{
+    height: 70vh;
+    margin-top: 3rem;
+    padding: 0;
+
+}
+section.services .content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin: 2rem 2rem;
+
+
+}
+.servicebox{
+    background-color: var(--colorsecondary);
+    padding: 5rem 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+i{
+    border: 1px solid ;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 1.5rem;
+    
+}
+
+
+section.project{
+    padding: 2rem 1rem;
+}
+
+section.project .content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: 4rem 0;
+}
+
+section.project .content .projectBx .imgBx{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: 0.5s ease-in-out;
+
+}
+section.project .content .projectBx:hover .imgBx{
+    transform: translateY(-100%);
+
+}
+section.project .content .projectBx .imgBx img{
+    width: 100%;
+    height: 300px;
+    
+
+}
+section.project .content .projectBx{
+    overflow: hidden;
+    position: relative;
+}
+section.project .content .projectBx .textbox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition:transform 0.5s ease-in-out;
+    background-color: var(--colorsecondary);
+}
+section.project .content .projectBx:hover .textbox{
+    transform: translateY(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+section.project .content .projectBx:hover .textbox h3{
+    font-size: 3rem;
+    
+}
+footer{
+    text-align: center;
+    background-color: var(--colorsecondary);
+    color: var(--colorjunior);
+    height: 50vh;
+    border: 1px solid var(--colorsecondary);
+}
+.info{
+    margin-top: 4rem;
+
+}
+.info h3{
+    margin-bottom: 1rem;
+}
+.front{
+    margin-bottom: 1rem;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .aside{
+        display: none;
+    }
+    .about .imgBx img{
+        display: none;
+    }
+    section.about .content .textbox{
+        margin: 1rem;
+        width: 100%;
+
+
+    }
+    .projectBx img{
+        height:100px;
+    }
+    section.project .content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin: 2rem 0;
+
+    }
+
+    section.services{
+        height: 85vh;
+        margin-bottom: 3rem;
+    }
+    
+    
+    
+
+    
+}
