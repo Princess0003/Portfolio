@@ -171,6 +171,7 @@ UL.social_media li a svg{
 section.about{
     margin-top: 20rem;
     padding: 20px 40px;
+    height: 70vh;
 }
 section .title{
     width: 100%;
@@ -197,9 +198,7 @@ section .title{
     background-color: var(--colorjunior);
 
 }
-section.about{
-    height: 70vh;
-}
+
 section.about .content{
     display: flex;
     justify-content: space-between;
@@ -252,6 +251,7 @@ section.services .content{
     text-align: center;
     justify-content: center;
     flex-direction: column;
+
 }
 i{
     border: 1px solid ;
@@ -308,6 +308,7 @@ section.project .content .projectBx .textbox{
 section.project .content .projectBx:hover .textbox{
     transform: translateY(0);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -315,6 +316,18 @@ section.project .content .projectBx:hover .textbox{
 section.project .content .projectBx:hover .textbox h3{
     font-size: 3rem;
     
+}
+.button{
+    display: inline-block;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: var(--colorjunior);
+    margin-top: 15px;
+
 }
 footer{
     text-align: center;
@@ -355,17 +368,39 @@ footer{
     .projectBx img{
         height:100px;
     }
+    section.project{
+        margin-top: 4rem;
+    }
     section.project .content{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    margin: 2rem 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.5rem;
+    margin: 1.5rem ;
 
     }
 
     section.services{
-        height: 85vh;
+        height: 100vh;
         margin-bottom: 3rem;
+    }
+
+    section.services .content{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 2rem;
+        margin: 2rem;
+    
+    
+    }
+    
+    section.about{
+        height: 60vh;
+    }
+    .banner{
+    }
+    .banner_content{
+        height: 75vh;
+
     }
     
     
